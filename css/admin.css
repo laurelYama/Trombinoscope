@@ -1,0 +1,48 @@
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#navbarNav .navbar-nav .nav-item:nth-child(1) .nav-link {
+    color: #00B0F0;
+}
+/* Applique les styles de transition et soulignement */
+.navbar-nav .nav-link {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #00B0F0;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+.navbar-brand .logo {
+    width: 150px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        width: 150px;
+    }
+}
+

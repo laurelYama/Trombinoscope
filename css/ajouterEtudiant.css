@@ -1,0 +1,124 @@
+/* Container for the form */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    padding: 3px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+       /* Style pour la modale */
+       .modal {
+        display: none; /* La modale est cachée par défaut */
+        position: fixed; /* Rester en place (ne pas défiler avec la page) */
+        z-index: 1; /* Rester au-dessus */
+        left: 0;
+        top: 0;
+        width: 100%; /* Largeur pleine */
+        height: 100%; /* Hauteur pleine */
+        overflow: auto; /* Activer le défilement si nécessaire */
+        background-color: rgb(0,0,0); /* Couleur de fond avec opacité */
+        background-color: rgba(0,0,0,0.4); /* Couleur de fond avec opacité */
+    }
+
+    /* Modale contenu */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% à partir du haut et centré */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Largeur de la modale */
+        max-width: 500px; /* Largeur maximale de la modale */
+        text-align: center; /* Centre le texte */
+        border-radius: 10px; /* Ajoute des coins arrondis */
+    }
+
+    /* Le bouton fermer (x) */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Style des boutons dans la modale */
+    .modal button {
+        padding: 10px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .modal button#btn-oui {
+        background-color: #4CAF50; /* Couleur verte */
+        color: white;
+    }
+
+    .modal button#btn-non {
+        background-color: #f44336; /* Couleur rouge */
+        color: white;
+    }
+
+    .modal button:hover {
+        opacity: 0.8;
+    }

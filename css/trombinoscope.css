@@ -1,0 +1,248 @@
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-nav .nav-item:nth-child(2) .nav-link {
+    color: #00B0F0;
+}
+/* Applique les styles de transition et soulignement */
+.navbar-nav .nav-link {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #00B0F0;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.bg-white {
+    background-color: white;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+@media (min-width: 640px) {
+    .bg-white {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+
+@media (min-width: 640px) {
+    .text-3xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+}
+
+.text-gray-900 {
+    color: #1a202c;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.leading-8 {
+    line-height: 2rem;
+}
+
+.text-gray-600 {
+    color: #718096;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.leading-7 {
+    line-height: 1.75rem;
+}
+
+.tracking-tight {
+    letter-spacing: -0.015625rem;
+}
+
+.text-indigo-600 {
+    color: #5a67d8;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .logo {
+        width: 150px;
+    }
+}
+
+
+/* Footer styles */
+
+/* Style général du footer */
+footer.footer-distributed {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center; /* Centrer le contenu du footer */
+}
+
+/* Style pour la partie gauche du footer */
+.footer-distributed .footer-left {
+    width: 100%; /* Prend toute la largeur */
+    text-align: center; /* Centrer le contenu */
+    padding: 0 20px;
+}
+
+/* Style pour le titre du footer */
+.footer-distributed h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Style pour les liens du footer */
+.footer-distributed .footer-links {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin: 0 0 10px;
+    padding: 0;
+    display: inline-block; /* Mettre les liens en ligne */
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+    margin-right: 10px; /* Ajout d'un espace entre les liens */
+}
+
+.footer-distributed .footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Style pour la partie centrale du footer */
+/* Enlève les styles de lien par défaut pour les liens dans le footer */
+.footer-distributed a {
+    color: inherit; /* Utilise la couleur de texte parente */
+    text-decoration: none; /* Enlève le soulignement par défaut */
+}
+
+.footer-distributed a:hover {
+    color: #00B0F0; /* Change la couleur au survol si nécessaire */
+}
+
+/* Assurez-vous que les styles personnalisés pour les liens avec soulignement fonctionnent */
+.footer-left a {
+    color: #ffffff;
+    margin-right: 10px;
+    position: relative;
+}
+
+.footer-left .footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #00B0F0;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.footer-left .footer-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Styles pour les éléments du centre du footer */
+.footer-distributed .footer-center {
+    width: 100%; /* Prend toute la largeur */
+    text-align: center; /* Centrer le contenu */
+    padding: 0 20px;
+}
+
+.footer-distributed .footer-center i {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    line-height: 1.8;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-left, .footer-center, .footer-right {
+        width: 100%;
+        margin-bottom: 30px;
+        float: none;
+    }
+}
+
+/* modoal */
+
+.team-member img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.team-member img:hover {
+    transform: scale(1.05);
+}
