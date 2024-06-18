@@ -59,9 +59,9 @@
         <h2>Témoignages des étudiants</h2>
         <div class="testimonials">
             <div class="testimonial-item">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Photo de Dries Vincent">
-                <h3>Nom de l'étudiant</h3>
-                <p>Année d'études | Domaine d'études</p>
+                <img src="images/promotion_2022/IMG-20240612-WA0038.jpg" alt="Photo de l'etudiant">
+                <h3>NSIME MBA</h3>
+                <p>2<sup>ème</sup> année | informatique</p>
                 <blockquote>
                     "Texte du témoignage de l'étudiant. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                 </blockquote>
@@ -69,9 +69,9 @@
             
             <div class="testimonials">
             <div class="testimonial-item">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Photo de Dries Vincent">
-                <h3>Nom de l'étudiant</h3>
-                <p>Année d'études | Domaine d'études</p>
+                <img src="images/promotion_2021/IMG-20240612-WA0009.jpg" alt="Photo de de l'etudiant">
+                <h3>METCHEBA ILAMBI</h3>
+                <p>3<sup>ème</sup> année | informatique</p>
                 <blockquote>
                     "Texte du témoignage de l'étudiant. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                 </blockquote>

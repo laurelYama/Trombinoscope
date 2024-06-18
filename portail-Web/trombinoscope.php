@@ -58,7 +58,7 @@ if (isset($_SESSION['resultats_recherche'])) {
                 <div class="col-lg-8 mx-auto text-center">
                     <h2 class="text-3xl font-bold tracking-tight text-gray-900">Promotion ESIITECH</h2>
                     <p class="mt-4 text-lg leading-8 text-gray-600">
-                        Nous formons les experts de demains.
+                        Nous formons les experts de demain !
                     </p>
                 </div>
             </div>
@@ -67,12 +67,12 @@ if (isset($_SESSION['resultats_recherche'])) {
             <?php foreach ($etudiants as $datas): ?>
                 <div class="col-sm-6 col-lg-4 mb-4">
                     <div class="team-member text-center">
-                        <img class="rounded-circle mb-4" src="../images/<?php echo htmlspecialchars($datas['photo']); ?>" alt="Photo de l'étudiant" 
+                        <img class="rounded-circle mb-4" src="../images/depot/<?php echo htmlspecialchars($datas['photo']); ?>"alt="Photo de l'étudiant" 
                              data-bs-toggle="modal" data-bs-target="#studentModal"
                              data-name="<?php echo htmlspecialchars($datas['nom']); ?>" data-prenom="<?php echo htmlspecialchars($datas['prenom']); ?>" data-promotion="<?php echo htmlspecialchars($datas['annee']); ?>" data-parcours="<?php echo htmlspecialchars($datas['niveau']); ?>" 
-                             data-email="<?php echo htmlspecialchars($datas['email']); ?>" data-telephone="<?php echo htmlspecialchars($datas['numeroTelephone']); ?>" data-specialite="<?php echo htmlspecialchars($datas['nom_specialite']); ?>" data-photo="../images/<?php echo htmlspecialchars($datas['photo']); ?>">
+                             data-email="<?php echo htmlspecialchars($datas['email']); ?>" data-telephone="<?php echo htmlspecialchars($datas['numeroTelephone']); ?>" data-specialite="<?php echo htmlspecialchars($datas['nom_specialite']); ?>" data-photo="../images/depot/<?php echo htmlspecialchars($datas['photo']); ?>">
                         <h3 class="text-base"><?php echo htmlspecialchars($datas['nom']); ?> <?php echo htmlspecialchars($datas['prenom']); ?></h3>
-                        <p class="text-sm"><?php echo htmlspecialchars($datas['annee']); ?></p>
+                        <p class="text-sm">Promotion <?php echo htmlspecialchars($datas['annee']); ?></p>
                         <p class="text-sm"><?php echo htmlspecialchars($datas['niveau']); ?></p>
                     </div>
                 </div>

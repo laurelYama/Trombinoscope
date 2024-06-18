@@ -10,7 +10,7 @@ if (!isset($_SESSION['id'])) {
 }
 
 // Vérifiez si l'utilisateur est administrateur ou a un accès autorisé
-if ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'admin') {
+if ($_SESSION['role'] !== 'admin' && $_SESSION['role'] !== 'normal') {
     // Redirigez vers une autre page ou affichez un message d'erreur
     header('Location: login.php?error=Accès refusé');
     exit();
@@ -70,7 +70,7 @@ if (isset($_POST['logout'])) {
 
     <!-- Barre de recherche -->
     <div class="container mt-3">
-        <form class="d-flex">
+        <form class="d-flex" method="get" action="rechercheEtudiants.php">
             <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Rechercher">
             <button class="btn btn-outline-success" type="submit">Rechercher</button>
         </form>
@@ -103,7 +103,7 @@ if (isset($_POST['logout'])) {
             <tbody>
             <?php while ($datas = $data->fetch(PDO::FETCH_ASSOC)): ?>
                 <tr>
-                    <td><img src="../images/<?php echo $datas['photo']; ?>" alt="Avatar" class="img-thumbnail" style="max-width: 50px;"></td>
+                    <td><img src="../images/depot/<?php echo $datas['photo']; ?>" alt="Avatar" class="img-thumbnail" style="max-width: 50px;"></td>
                     <td><?php echo $datas['nom']; ?></td>
                     <td><?php echo $datas['prenom']; ?></td>
                     <td><?php echo $datas['numeroTelephone']; ?></td>

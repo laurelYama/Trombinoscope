@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 08 juin 2024 à 11:40
+-- Généré le : mar. 18 juin 2024 à 20:16
 -- Version du serveur : 8.0.36
 -- Version de PHP : 8.2.12
 
@@ -44,8 +44,28 @@ CREATE TABLE `etudiant` (
 --
 
 INSERT INTO `etudiant` (`idEtudiant`, `nom`, `prenom`, `numeroTelephone`, `email`, `photo`, `id_parcours`, `id_specialite`, `id_promotion`) VALUES
-(5, 'NGWAMBILA', 'Laurel', '066396925', 'ngwambilaj@gmail.com', 'yama.JPEG', 1, 3, 2),
-(11, 'NGOULOU', 'joyce', '077458521', 'joyce@gmail.com', 'yama.JPEG', 1, 2, 1);
+(17, 'NGWAMBILA YAMA', 'laurel steffen', '066396925', 'ngwambilaj@gmail.com', '1718707769_IMG-20240612-WA0012.jpg', 1, 3, 2),
+(19, 'DJAMPOU NKAPSEU', 'Emmanuel Stéphane', '074394225', 'xeneomega@gmail.com', '1718708483_IMG-20240612-WA0015.jpg', 1, 1, 2),
+(20, 'BIBANG MINTSA ', 'Laurent Jethro Elisha', '076534321', 'elishaibang@mail.com', '1718708908_OIP (1).jpeg', 1, 2, 3),
+(21, 'EBENDE MAVOUROULOU', 'Brice Angelyn', '062840135', 'bricemavourolou@mail.com', '1718709100_OIP (1).jpeg', 1, 5, 3),
+(22, 'KAGHETA PAMAN', 'AXIAL', '077901678', 'kaghetapamanaxial@gmail.com', '1718709340_OIP (1).jpeg', 1, 1, 3),
+(23, 'MOUNDZINGOU MBELA ', 'Vann Djeffry', '062998084', 'mbelavanndjeffrycamille@gmail.com', '1718709502_OIP (1).jpeg', 1, 1, 3),
+(24, 'ASSEMBE NDONG', 'Adevy Jorence', '074761410', 'Jorenceaxel@gmail.com', '1718709690_OIP (1).jpeg', 1, 1, 3),
+(25, 'OTSAGHE ', 'Josph Alexandre', '076522230', 'otsaghealexandre@gmail.com', '1718709878_OIP (1).jpeg', 1, 2, 3),
+(26, 'NZOUGHE NGUEMA  ', 'Paul Alain ', '077708457', 'alinhonguema@gmail.com', '1718710066_IMG-20240612-WA0055.jpg', 1, 2, 3),
+(27, 'NZOUKI NIANG', 'Abdel Bachir', '066205512', 'nzoukib@gmail.com', '1718710235_IMG-20240612-WA0035.jpg', 1, 1, 2),
+(28, 'SOUAMY', 'Kylian Mael', '074782843', 'souamykylianmael@gmail.com', '1718710413_IMG-20240612-WA0040.jpg', 1, 2, 2),
+(29, 'BAH', 'Abou', '074410347', 'bahabou42@gmail.com', '1718710568_OIP (1).jpeg', 1, 1, 3),
+(30, 'BHONGO MAVOUNGOU', 'Muccia Marie-Pierre', '077624151', 'mucciabhongomavoungou@gmail.com', '1718710695_OIP (1).jpeg', 1, 1, 3),
+(31, 'MISSOU DINZAMBOU', 'Alexandre Isa\'ac Ibrahim', '074290186', 'alexandredinzambou@gmail.com', '1718710872_IMG-20240612-WA0041.jpg', 1, 3, 3),
+(32, 'KOUMBA WANDE', 'Diarrisso', '074148711', 'Maviogatalici@gmail.com', '1718710984_IMG-20240612-WA0044.jpg', 1, 2, 3),
+(33, 'GOGAN', 'Syfaure Saïd', '062596222', 'skygogan4@gmail.com', '1718711416_OIP (1).jpeg', 1, 1, 3),
+(34, 'nsumbu', 'Obed-riche ', '074421185', 'richensumbu@gmail.com', '1718711595_IMG-20240612-WA0042.jpg', 1, 1, 3),
+(35, 'Mavoungou', 'Beni reel', '074803148', 'benireelmavoungou@gmail.com', '1718711784_IMG-20240612-WA0053.jpg', 1, 1, 3),
+(36, 'IBOUANGA IBOUANGA', 'Levi emmanuel', '074288075', 'ibouangaleviemmanuel@gmail.com', '1718711970_OIP (1).jpeg', 1, 1, 3),
+(37, 'KOFFI HOUNSOUGBIN ', 'Yenagnon Bekale Baurice', '066014325', 'bauriceyenagnon@gmail.com', '1718712134_OIP (1).jpeg', 1, 1, 3),
+(38, 'EBENDE KWALLO', 'Lauren Junior', '062287505', 'juniorebende79@gmail.com', '1718712295_OIP (1).jpeg', 1, 2, 3),
+(39, 'BOUKA NGOLO', 'Victoria Esther', '077878984', 'estherbouka2@gmail.com', '1718716318_IMG-20240612-WA0037.jpg', 1, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -178,7 +198,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `etudiant`
 --
 ALTER TABLE `etudiant`
-  MODIFY `idEtudiant` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `idEtudiant` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT pour la table `parcours`

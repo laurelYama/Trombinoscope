@@ -14,7 +14,13 @@ body {
     position: relative;
     display: inline-block;
 }
-
+.rounded-circle {
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    object-position: top;
+}
 .navbar-nav .nav-link::after {
     content: '';
     position: absolute;
