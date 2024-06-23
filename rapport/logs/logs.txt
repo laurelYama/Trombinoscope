@@ -1,0 +1,8 @@
+[2024-06-22 09:08:58] [User ID: unknown, User Name: unknown] Tentative d'ajout avec email existant: akama@gmail.com
+[2024-06-23 07:54:01] [User ID: unknown, User Name: unknown] Tentative d'ajout avec numéro de téléphone existant: 066396925
+[2024-06-23 07:54:30] [User ID: unknown, User Name: unknown] Tentative d'ajout avec email existant: ngwambilaj@gmail.com
+[2024-06-23 07:54:52] [User ID: unknown, User Name: unknown] Ajout réussi de l'étudiant: akama@gmail.com
+[2024-06-23 09:17:24] [User ID: unknown, User Name: unknown] Tentative d'ajout avec numéro de téléphone existant: 066396925
+[2024-06-23 09:17:36] [User ID: unknown, User Name: unknown] Ajout réussi de l'étudiant: akama@gmail.com
+[2024-06-23 09:20:37] [User ID: unknown, User Name: unknown] Ajout réussi de l'étudiant: akama@gmail.com
+[2024-06-23 09:24:26] [User ID: unknown, User Name: unknown] Ajout réussi de l'étudiant: akama@gmail.com

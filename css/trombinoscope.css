@@ -39,6 +39,7 @@ body {
     transform-origin: bottom left;
 }
 
+
 .bg-white {
     background-color: white;
     padding-top: 6rem;
@@ -118,10 +119,7 @@ body {
     align-items: center;
 }
 
-.logo {
-    width: 100px;
-    height: auto;
-}
+
 
 @media (min-width: 768px) {
     .logo {
@@ -134,16 +132,16 @@ body {
 
 /* Style général du footer */
 footer.footer-distributed {
-    background-color: #333333;
+    background-color: #00B0F0;
     color: #ffffff;
     padding: 60px 0;
-    text-align: center; /* Centrer le contenu du footer */
+    text-align: center;
 }
 
 /* Style pour la partie gauche du footer */
 .footer-distributed .footer-left {
-    width: 100%; /* Prend toute la largeur */
-    text-align: center; /* Centrer le contenu */
+    width: 100%;
+    text-align: center;
     padding: 0 20px;
 }
 
@@ -160,7 +158,7 @@ footer.footer-distributed {
     color: #ffffff;
     margin: 0 0 10px;
     padding: 0;
-    display: inline-block; /* Mettre les liens en ligne */
+    display: inline-block;
 }
 
 .footer-distributed .footer-links a {
@@ -169,25 +167,23 @@ footer.footer-distributed {
     text-decoration: none;
     color: inherit;
     transition: color 0.3s ease;
-    margin-right: 10px; /* Ajout d'un espace entre les liens */
+    margin-right: 10px;
 }
 
 .footer-distributed .footer-links a:hover {
-    color: #ffffff;
+    color: #384a57;
 }
 
 /* Style pour la partie centrale du footer */
-/* Enlève les styles de lien par défaut pour les liens dans le footer */
 .footer-distributed a {
-    color: inherit; /* Utilise la couleur de texte parente */
-    text-decoration: none; /* Enlève le soulignement par défaut */
+    color: inherit;
+    text-decoration: none;
 }
 
 .footer-distributed a:hover {
-    color: #00B0F0; /* Change la couleur au survol si nécessaire */
+    color: #384a57;
 }
 
-/* Assurez-vous que les styles personnalisés pour les liens avec soulignement fonctionnent */
 .footer-left a {
     color: #ffffff;
     margin-right: 10px;
@@ -202,7 +198,7 @@ footer.footer-distributed {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #00B0F0;
+    background-color: #384a57;
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
 }
@@ -214,8 +210,8 @@ footer.footer-distributed {
 
 /* Styles pour les éléments du centre du footer */
 .footer-distributed .footer-center {
-    width: 100%; /* Prend toute la largeur */
-    text-align: center; /* Centrer le contenu */
+    width: 100%; 
+    text-align: center; 
     padding: 0 20px;
 }
 
@@ -252,3 +248,26 @@ footer.footer-distributed {
 .team-member img:hover {
     transform: scale(1.05);
 }
+
+   /*style pour la recherche*/
+
+   .search-container {
+    display: flex;
+    flex-direction: column;
+   
+}
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.search-form select, .search-form button {
+    width: auto;
+    border-radius: 20px;
+}
+.search-form button {
+    border-radius: 20px;
+}
+

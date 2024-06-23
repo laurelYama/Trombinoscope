@@ -6,20 +6,22 @@ body {
     box-sizing: border-box;
 }
 
-
-#navbarNav .navbar-nav .nav-item:nth-child(1) .nav-link {
+/* Styles pour la navbar */
+.navbar-nav .nav-item:nth-child(1) .nav-link {
     color: #00B0F0;
 }
+
 /* Applique les styles de transition et soulignement */
 .navbar-nav .nav-link {
     position: relative;
     display: inline-block;
+    padding-bottom: 5px; /* Ajout d'un espace en bas */
 }
 
 .navbar-nav .nav-link::after {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 70%;
     transform: scaleX(0);
     height: 2px;
     bottom: 0;
@@ -34,15 +36,30 @@ body {
     transform-origin: bottom left;
 }
 
-
+/* Styles pour la navbar-brand */
 .navbar-brand .logo {
     width: 150px;
     height: auto;
 }
 
+.navbar-text {
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+.navbar-text span {
+    color: #007bff;
+}
+
+/* Media Query pour la taille du logo */
 @media (min-width: 768px) {
-    .logo {
+    .navbar-brand .logo {
         width: 150px;
     }
 }
+
+
+
+
+
 

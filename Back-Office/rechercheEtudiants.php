@@ -1,20 +1,21 @@
 <?php
-include 'connection.php';
-// Récupérer les paramètres de recherche et de tri depuis l'URL
-$q = isset($_GET['q']) ? $_GET['q'] : '';
-$tri = isset($_GET['tri']) ? $_GET['tri'] : 'nom';
-$ordre = isset($_GET['ordre']) && ($_GET['ordre'] === 'desc' || $_GET['ordre'] === 'asc') ? $_GET['ordre'] : 'asc';
+// Vérifier si des données de recherche ont été soumises
+if(isset($_GET['search'])) {
+    include 'connection.php';
 
-// Effectuer la requête SQL avec le tri
-$query = "SELECT * FROM etudiant WHERE nom LIKE '%$q%' ORDER BY $tri $ordre";
+    // Préparer la requête SQL pour rechercher les étudiants
+    $search = '%' . $_GET['search'] . '%';
+    $sql = "SELECT * FROM etudiant WHERE nom LIKE :search OR prenom LIKE :search OR email LIKE :search";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':search', $search, PDO::PARAM_STR);
+    $stmt->execute();
 
-// Exécuter la requête SQL et récupérer les résultats
- $stmt = $pdo->query($query); // Utilisez PDO ou mysqli pour exécuter la requête SQL
- $results = $stmt->fetchAll(PDO::FETCH_ASSOC); // Récupérez les résultats sous forme de tableau associatif
+    // Récupérer les résultats de la recherche
+    $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Afficher les résultats triés dans le tableau
- foreach ($results as $row) {
-//     // Affichez chaque ligne du tableau ici
- }
-
+    // Rediriger vers une autre page si le paramètre de recherche n'est pas présent
+} elseif (empty($_GET['search'])) {
+    // Afficher un message d'alerte si le champ de recherche est vide
+    echo '<div class="alert alert-warning mt-3" role="alert">Le champ de recherche est vide.</div>';
+} 
 ?>

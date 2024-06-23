@@ -3,54 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="../images/logos.jpeg" href=https://esiitech-gabon.com/images/favicon.jpeg>
     <link rel="stylesheet" href="../css/ajouterEtudiant.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
     <title>Formulaire Étudiant</title>
 </head>
+
+<style>
+    /*style pour les messages d'erreur*/
+    .error {
+        display: none;
+        color: red;
+        font-size: 12px;
+    }
+
+    .error.active {
+        display: block;
+    }
+
+    .invalid {
+        border-color: red;
+    }
+
+    .error-icon {
+        margin-left: 5px;
+        font-size: 16px;
+    }
+</style>
+</head>
 <body>
-    <h2>Ajouter un Étudiant</h2>
     <form action="insertion.php" method="POST" enctype="multipart/form-data" id="my-form">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required><br><br>
+        <h2>Ajouter un étudiant</h2>
+        
+        <input type="text" id="nom" name="nom" placeholder="Nom" required>
+        <span id="nom-error" class="error"></span>
+        
+        <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+        <span id="prenom-error" class="error"></span>
 
-        <label for="prenom">Prénom :</label>
-        <input type="text" id="prenom" name="prenom" required><br><br>
+        <input type="tel" id="telephone" placeholder="Numéro de téléphone" name="numeroTelephone" pattern="[0-9]{9}" title="Le numéro de téléphone doit comporter 9 chiffres" required>
+        <span id="telephone-error" class="error"></span><span id="telephone-icon" class="error-icon"></span>
 
-        <label for="telephone">Numéro de téléphone :</label>
-        <input type="tel" id="telephone" name="numeroTelephone" pattern="[0-9]{9}" required><br><br>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <span id="email-error" class="error"></span><span id="email-icon" class="error-icon"></span>
 
-        <label for="email">Adresse émail :</label>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <label for="id_promotion">Promotion :</label>
         <select id="promotion" name="id_promotion" required>
-            <option value="">Sélectionnez une promotion</option>
+            <option value="">Sélection de la Promotion</option>
             <option value="1">2021</option>
             <option value="2">2022</option>
             <option value="3">2023</option>
-        </select><br><br>
+        </select>
 
-        <label for="id_parcours">Parcours :</label>
         <select id="parcours" name="id_parcours" required>
-            <option value="">Sélectionnez un parcours</option>
-            <option value="1">Licence Professionnelle informatique</option>
-        </select><br><br>
+            <option value="">Sélection du Parcours</option>
+            <option value="1">Licence Professionnelle Informatique</option>
+        </select>
 
-        <label for="id_specialite">Spécialité :</label>
         <select id="specialite" name="id_specialite" required>
-            <option value="">Sélectionnez une spécialité</option>
+            <option value="">Sélection de la Spécialité</option>
             <option value="1">CYBER DEFENSE</option>
             <option value="2">MONETIQUE BANCAIRE</option>
             <option value="3">DEVELOPPEMENT WEB & MOBILE</option>
             <option value="4">RESEAUX HAUT DEBIT ET SANS FIL</option>
             <option value="5">BIG DATA</option>
             <option value="6">CLOUD COMPUTING</option>
-        </select><br><br>
+        </select>
 
-        <label for="photo">Demi photo numérique de l'étudiant :</label>
-        <input type="file" id="photo" name="photo" accept="image/*" required><br><br>
+        <input type="file" id="photo" name="photo" accept="image/*" required>
 
         <input type="submit" value="Ajouter">
     </form>
+</body>
+</html>
+
 
     <!-- Modale pour demander si l'utilisateur veut ajouter un autre étudiant -->
     <div id="modal" class="modal">
@@ -62,44 +87,6 @@
         </div>
     </div>
 
-    <script>
-        function afficherModale() {
-            var modal = document.getElementById('modal');
-            modal.style.display = 'block';
-
-            var span = document.getElementsByClassName('close')[0];
-            span.onclick = function() {
-                modal.style.display = 'none';
-            }
-
-            var btnOui = document.getElementById('btn-oui');
-            btnOui.onclick = function() {
-                modal.style.display = 'none';
-                window.location.href = 'ajouterEtudiant.php';
-            }
-
-            var btnNon = document.getElementById('btn-non');
-            btnNon.onclick = function() {
-                window.location.href = 'etudiant.php';
-            }
-        }
-
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.has('success')) {
-                alert("Étudiant ajouté avec succès! ");
-                afficherModale();
-            } else if (urlParams.has('error')) {
-                const error = urlParams.get('error');
-                if (error === 'invalid_email') {
-                    alert("Erreur: Adresse email invalide. ❌");
-                } else if (error === 'invalid_photo') {
-                    alert("Erreur: Photo invalide ou trop volumineuse. ❌");
-                } else if (error === 'insert_failed') {
-                    alert("Erreur: Échec de l'ajout de l'étudiant. ❌");
-                }
-            }
-        }
-    </script>
+    <script src="../js/ajouterEtudiant.js"></script>
 </body>
 </html>

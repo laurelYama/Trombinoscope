@@ -1,6 +1,6 @@
 <?php
 // Connexion à la base de données
-include '../Back-Office/connection.php';
+include 'connection.php';
 
 session_start();
 

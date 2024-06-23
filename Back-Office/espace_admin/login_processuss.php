@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include '../connection.php';
 include 'crypto.php'; // Fichier contenant les fonctions encryptPassword et decryptPassword
 
